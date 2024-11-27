@@ -16,7 +16,11 @@ const limiter = rateLimit({
 // Helmet for various security headers
 app.use(helmet());
 // CORS configuration (adjust origins and options as needed)
-app.use(cors());
+app.use(cors(
+  {
+    origin: '*',
+  }
+));
 app.use(
   express.json({
     limit: "16kb",
