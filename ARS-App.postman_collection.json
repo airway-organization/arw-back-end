@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "6b159019-cfb1-4091-8b83-884e9b3e33e4",
+		"name": "ARS-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "questions",
+			"item": [
+				{
+					"name": "create-question",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImUyYjIyZmQ0N2VkZTY4MmY2OGZhY2NmZTdjNGNmNWIxMWIxMmI1NGIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYXJ3LXByb2plY3QtN2RiY2IiLCJhdWQiOiJhcnctcHJvamVjdC03ZGJjYiIsImF1dGhfdGltZSI6MTcxNTM0NTMyMSwidXNlcl9pZCI6ImM2TGxWazRlalBOeTRyUmZZbGNFS0g3RUc3YTIiLCJzdWIiOiJjNkxsVms0ZWpQTnk0clJmWWxjRUtIN0VHN2EyIiwiaWF0IjoxNzE1MzQ1MzIxLCJleHAiOjE3MTUzNDg5MjEsImVtYWlsIjoiYWhhZEBleGFtcGxlLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJhaGFkQGV4YW1wbGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.YX35ym49tKRwx_j5tNiSGhbwr0CIi7FjMKo0qeGkx3wFkoIASTPndD2X_17l_cpAaWLpvRFoIY1kWgHGW_BvdAXOWeL1u_-HnFjzHusUv8FbVrfQjTM559EpRCIy8XtEvUsMsF4rCa7uFLQ2h6TFzPYoqXjo979m9GDZttgzK1dLs7VJQrWYgHRPv5cuVChG2qK_7NmjInuHg79FhF7gT-HH7xRhVrve52y6Gxhv0_2D8CbLE_LbI1guvZoMC3Q4FORMedn2bBr3KMjabArAhBTy3-l_d-Vskv61I1eqOU6DsebKiqVLrAPtXsL6Qy868wLsozNY_2n44Cix8BmXCg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\": \"testing validation\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/admin/question/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"admin",
+								"question",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-admin",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/question/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"question",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/question/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"question",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImUyYjIyZmQ0N2VkZTY4MmY2OGZhY2NmZTdjNGNmNWIxMWIxMmI1NGIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYXJ3LXByb2plY3QtN2RiY2IiLCJhdWQiOiJhcnctcHJvamVjdC03ZGJjYiIsImF1dGhfdGltZSI6MTcxNTU5NzY3MCwidXNlcl9pZCI6ImM2TGxWazRlalBOeTRyUmZZbGNFS0g3RUc3YTIiLCJzdWIiOiJjNkxsVms0ZWpQTnk0clJmWWxjRUtIN0VHN2EyIiwiaWF0IjoxNzE1NTk3NjcyLCJleHAiOjE3MTU2MDEyNzIsImVtYWlsIjoiYWhhZEBleGFtcGxlLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJhaGFkQGV4YW1wbGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.f0rblgNwrbZM85h7EvjAoIpKHtz2F5blXk2lDDSZ1118cipEgAc7XZNuIHsHVjz5P-rwThvgJZyjb1sQzQxbjcmKkKj9Gchp1CORklOFWwggys5IBNMFsPStHaw02TFMIUtqmZT8mPsKDIkaNgvcOlRvJzYgxe1Umpa1EXIfkjLWdgpnXAlHYp9XfhnvQix8fj1z9K-oLhbhXVN_NLe20XATsYk15d0NBllSRNFDzxtHNoZ38rb5NLGsiaxDBsdzuA-J-v--oMaoZUafQzi5cHeIfoivNIEEaqWeXWtHTIgQ0oMFUaGc8mLEWHV0FHqztsI5eAAUROq7QMeF6lCV2g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/admin/question/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"admin",
+								"question",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reading by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc2MDI3MTI2ODJkZjk5Y2ZiODkxYWEwMzdkNzNiY2M2YTM5NzAwODQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYXJ3LXByb2plY3QtN2RiY2IiLCJhdWQiOiJhcnctcHJvamVjdC03ZGJjYiIsImF1dGhfdGltZSI6MTcxNTI1NDU4MSwidXNlcl9pZCI6Ik9mdEhLdURTTkJaZGxzWTg5YWtiQU5BdnlLSTIiLCJzdWIiOiJPZnRIS3VEU05CWmRsc1k4OWFrYkFOQXZ5S0kyIiwiaWF0IjoxNzE1MjU0NTgyLCJleHAiOjE3MTUyNTgxODIsImVtYWlsIjoiemVlc2hhbkBleGFtcGxlLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJ6ZWVzaGFuQGV4YW1wbGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.XZe8teJy90kV60kmT6l0HyBXzVwCzQRzehUKkOhvokM1X1-lwK4Q0FoO_U5oqOwzgQHiuw40jw-HoxLDpSMM2jk7DADs1zeAfiHA4napsjckPE_KfY-uoqoOE20QM7MsECGDf0GcmhVpPyn8-nC498WqsKLheUJV-LcsGhIYeNSETX8MYFAXzFmcsa75Y9W15KE0-ENmxexA80jxdM5Eo0ol8CQofULqrPqZLiT8J2AebesnXM2hWbKfwnm79y-x2X1MyTpowVf4UUtd-mfjB0BNfv1YkC4jrdZ5ygHpRvQ7d7kUvw_FLokhNyaW2JLtOPWvw5jXS0LGMxWOdDs81w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/question/xCg6j2S26APdd6XnxFZY",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"question",
+								"xCg6j2S26APdd6XnxFZY"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc2MDI3MTI2ODJkZjk5Y2ZiODkxYWEwMzdkNzNiY2M2YTM5NzAwODQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYXJ3LXByb2plY3QtN2RiY2IiLCJhdWQiOiJhcnctcHJvamVjdC03ZGJjYiIsImF1dGhfdGltZSI6MTcxNTA5MDk3NywidXNlcl9pZCI6InJrMU5YUE5lVk5nejRPandNYVdaUjl1U0J1STIiLCJzdWIiOiJyazFOWFBOZVZOZ3o0T2p3TWFXWlI5dVNCdUkyIiwiaWF0IjoxNzE1MDkwOTc3LCJleHAiOjE3MTUwOTQ1NzcsImVtYWlsIjoiaGFzc2FuQGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImhhc3NhbkBleGFtcGxlLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.LUrFCFaVt93stHDVYyQiSicig9NOEU0ZMRI8WPkz-5uJWuVTyr08ofDSe3dN_aXgTeCCrgGrjOXRyilxccTMZgUEfww2SArlXmPBY8OLLjML73or8gMsb3qtLgGrp6G12snvZf6VxTK2bgC9cBSC231TOLQfx6WcQ4xuzxeII6UMBD1IAcyRHgefW6xv5r_oYmXTy7I89yyowgPPwrfefDkLf6tk06I5LrB_U3jY3hyr-OiYqkxpg4Fsh7KZ_dv7bchLS77bHSETRymapp8lkjzVNaXvUTqsMbXW8dcg6T87ouFmHvJQulkd_61yuShUnnrCagM42PmkF8talXI4Wg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Ahad\",\r\n  \"email\": \"ahad@example.com\",\r\n  \"password\": \"p2234343\",\r\n  \"age\": 30,\r\n  \"gender\": \"male\",\r\n  \"phoneNumber\": \"+1234567890\",\r\n  \"isAccountActive\": true,\r\n  \"userRole\": \"user\",\r\n  \"profileImg\": \"https://example.com/profile.jpg\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/user/register",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"ahad@example.com\",\r\n  \"password\": \"p2234343\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/user/login",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "current-user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImUyYjIyZmQ0N2VkZTY4MmY2OGZhY2NmZTdjNGNmNWIxMWIxMmI1NGIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYXJ3LXByb2plY3QtN2RiY2IiLCJhdWQiOiJhcnctcHJvamVjdC03ZGJjYiIsImF1dGhfdGltZSI6MTcxNTI2MTYwNiwidXNlcl9pZCI6IlVTUENRN3BUVEFncHA1eDhyZkZLNWQxWFNlVTIiLCJzdWIiOiJVU1BDUTdwVFRBZ3BwNXg4cmZGSzVkMVhTZVUyIiwiaWF0IjoxNzE1MjYxNjA3LCJleHAiOjE3MTUyNjUyMDcsImVtYWlsIjoiYWxpcmF6YTVAZXhhbXBsZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYWxpcmF6YTVAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.mfpEwWnQS65dGLcAIJGWYMfLNlEGhH4DKcPRGsK6zsU5T3f1vEVi6P5HzBsOEuvcC90LremVj1Q32BnL-wO95BbJ25Qg2QluoaJTwRYDJqKvGopODHTGP1SkP6fXC1M4MK15wEN3Yw-dwLIpBbiAdhLxMZXg_MHTaWiykvMbzVM9d97Tyu_c-qhAHisB_7kbTKYzFVMlOviQB_OdxXevuQATI2S0E4mQzJlqO_jkkrDOrECePFIHtA_wHeirJTrmajKh3xdEqUrQjcvIs5usZRXlbYke6DUTeCAnJtBX8mil0EfxGzEDcJ6XEaPStc62xZ7qoK0zoyszDEkfHnu9pA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/user/current-user",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"user",
+								"current-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImUyYjIyZmQ0N2VkZTY4MmY2OGZhY2NmZTdjNGNmNWIxMWIxMmI1NGIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYXJ3LXByb2plY3QtN2RiY2IiLCJhdWQiOiJhcnctcHJvamVjdC03ZGJjYiIsImF1dGhfdGltZSI6MTcxNTI2MTYwNiwidXNlcl9pZCI6IlVTUENRN3BUVEFncHA1eDhyZkZLNWQxWFNlVTIiLCJzdWIiOiJVU1BDUTdwVFRBZ3BwNXg4cmZGSzVkMVhTZVUyIiwiaWF0IjoxNzE1MjYxNjA3LCJleHAiOjE3MTUyNjUyMDcsImVtYWlsIjoiYWxpcmF6YTVAZXhhbXBsZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYWxpcmF6YTVAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.mfpEwWnQS65dGLcAIJGWYMfLNlEGhH4DKcPRGsK6zsU5T3f1vEVi6P5HzBsOEuvcC90LremVj1Q32BnL-wO95BbJ25Qg2QluoaJTwRYDJqKvGopODHTGP1SkP6fXC1M4MK15wEN3Yw-dwLIpBbiAdhLxMZXg_MHTaWiykvMbzVM9d97Tyu_c-qhAHisB_7kbTKYzFVMlOviQB_OdxXevuQATI2S0E4mQzJlqO_jkkrDOrECePFIHtA_wHeirJTrmajKh3xdEqUrQjcvIs5usZRXlbYke6DUTeCAnJtBX8mil0EfxGzEDcJ6XEaPStc62xZ7qoK0zoyszDEkfHnu9pA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Ali raza\",\r\n  \"email\": \"aliraza5@example.com\",\r\n  \"password\": \"p2f234343\",\r\n  \"age\": 23,\r\n  \"gender\": \"male\",\r\n  \"phoneNumber\": \"+1234567890\",\r\n  \"isAccountActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/user/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImUyYjIyZmQ0N2VkZTY4MmY2OGZhY2NmZTdjNGNmNWIxMWIxMmI1NGIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYXJ3LXByb2plY3QtN2RiY2IiLCJhdWQiOiJhcnctcHJvamVjdC03ZGJjYiIsImF1dGhfdGltZSI6MTcxNTI2NTMxMywidXNlcl9pZCI6IlFuRFVsMTVtMUZaUFpXRHFkR1ZqT2xyWW9SZDIiLCJzdWIiOiJRbkRVbDE1bTFGWlBaV0RxZEdWak9scllvUmQyIiwiaWF0IjoxNzE1MjY1MzE0LCJleHAiOjE3MTUyNjg5MTQsImVtYWlsIjoic2FtZWVyQGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInNhbWVlckBleGFtcGxlLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.PgtWCLsvU2UTzdRwFvUpc3DnlaIYCw8GcETYTkmKebDALqT4ovFiGIgT2sd1gqhcS9VKLlc8SMWGdMv1ZVIZcPWO6WL07AWwzVL_SSlbWuR8Fwx1hbMIgyZhNtlDR2kZzOLxoM3WHUWEtMHDtBv5JUUtlC1sib1uwgaB73zifr7pwopQb4zy21caD-rg7CRu8aYQxKdEDXI2A1p67vUf1F0MsJwz4w0BV3SXFwYM6FOHtscwSlAY2Wz-_fFkb-k90QtD6GcsJ0YzWo9efOrkA0akqWnWm-n7OceLriSx6qonWbyh3dE9DmvXikxVWkc9DB0nIEZjjbN77AtqfO2MmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/user",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Answer",
+			"item": [
+				{
+					"name": "answer-submit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImUyYjIyZmQ0N2VkZTY4MmY2OGZhY2NmZTdjNGNmNWIxMWIxMmI1NGIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYXJ3LXByb2plY3QtN2RiY2IiLCJhdWQiOiJhcnctcHJvamVjdC03ZGJjYiIsImF1dGhfdGltZSI6MTcxNTI2NTk0OSwidXNlcl9pZCI6Imoxa0dUcGJVVm9OYTd5aEdYOWNLd1ZSRXdNazEiLCJzdWIiOiJqMWtHVHBiVVZvTmE3eWhHWDljS3dWUkV3TWsxIiwiaWF0IjoxNzE1MjY1OTQ5LCJleHAiOjE3MTUyNjk1NDksImVtYWlsIjoiYWxpcmF6YWJoYWlAZXhhbXBsZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYWxpcmF6YWJoYWlAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.Ps3EwQIOLAv0yeq4965ZSuJyy-hsC5k7Db3K2_n1judT03hP1q_hl03Lm1F6Bdv4VOKqgNfWxMNKRTrnlBkOOa4I3ApuG1STr4IBqUvURanF7EqW3kTK1BVKjPenB-LfYuzI91tVtTRUvntMvLkP0xbUFsOCxjbHIkfcEkQOTvEZPuk4q6IuA82qzjw9UoMjQzta_2jr5h21HSN8j81Q1Od-EW4FWC5Tr5_8nzEs1v8LgD-ymCvVrmugSQZnKrkNpKan6iB9tGVliFkzfp60xEAGnB1g3XUcsFEo1Lga14L1y1bbdyrbUagxiCPFaGFUpWTFWi40JV_4dAPIag1LZg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"answer\":70\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/user/answer/ZTep8VJ3S0JaAyLuj5Zk",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"user",
+								"answer",
+								"ZTep8VJ3S0JaAyLuj5Zk"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
