@@ -46,4 +46,11 @@ app.use("/api/v1/question", questionRouter);
 app.use("/api/v1/chart", chartRouter);
 app.use("/api/v1/admin", adminRouter);
 
+app.get("/health-check", (req, res) => {
+  return res.status(200).json({
+    status: 200,
+    message: "Backend Server is up and running!!!"
+  })
+})
+
 export { app };
